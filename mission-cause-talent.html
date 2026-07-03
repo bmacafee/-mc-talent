@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission + Cause Talent | Senior Communications Executive Search</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:      #0e1117;
+    --navy:     #1b2a3b;
+    --navy-lt:  #253650;
+    --copper:   #a0623a;
+    --copper-lt:#c07d55;
+    --copper-pale: #e8d5c4;
+    --ash:      #5c6670;
+    --mist:     #9aacb5;
+    --bone:     #f6f3ef;
+    --white:    #ffffff;
+    --gap:      clamp(60px, 8vw, 112px);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 56px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(14,17,23,0.07);
+  }
+
+  .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .wordmark span { color: var(--copper); font-style: italic; }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ash);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--copper); }
+
+  .nav-cta {
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--navy);
+    padding: 13px 26px;
+    text-decoration: none;
+    transition: background 0.25s;
+  }
+
+  .nav-cta:hover { background: var(--copper); }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 76px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 30px;
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1.06;
+    color: var(--ink);
+    margin-bottom: 36px;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--ash);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--ash);
+    max-width: 430px;
+    margin-bottom: 52px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--copper);
+    padding: 16px 32px;
+    text-decoration: none;
+    transition: background 0.25s;
+  }
+
+  .btn-primary:hover { background: var(--navy); }
+
+  .btn-ghost {
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(14,17,23,0.25);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--copper); border-color: var(--copper); }
+
+  /* dark panel */
+  .hero-image {
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 72px 56px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Signature element: a copper horizontal thread at the top of the dark panel */
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--copper);
+  }
+
+  .hero-panel-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.45;
+    color: var(--white);
+    max-width: 380px;
+    margin-top: 24px;
+  }
+
+  .hero-panel-attr {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--copper-lt);
+    margin-top: 20px;
+  }
+
+  /* Qualitative statement block at bottom of dark panel */
+  .hero-panel-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 32px;
+  }
+
+  .hero-panel-statement {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.55);
+    max-width: 340px;
+  }
+
+  .hero-panel-statement strong {
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+  }
+
+  /* ─── SHARED ─── */
+  section { padding: var(--gap) 80px; }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid rgba(14,17,23,0.08);
+    margin: 0 80px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 20px;
+  }
+
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(32px, 3.8vw, 50px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 26px;
+  }
+
+  .section-body {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--ash);
+  }
+
+  /* ─── APPROACH (was Differentiators) ─── */
+  #approach {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    background: var(--bone);
+  }
+
+  .approach-intro {
+    padding: var(--gap) 60px var(--gap) 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(14,17,23,0.08);
+  }
+
+  .approach-lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 28px;
+    border-left: 2px solid var(--copper);
+    padding-left: 24px;
+  }
+
+  .approach-grid {
+    padding: var(--gap) 80px var(--gap) 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 36px;
+    align-content: center;
+  }
+
+  .diff-item {}
+
+  .diff-bar {
+    width: 28px;
+    height: 2px;
+    background: var(--copper);
+    margin-bottom: 18px;
+  }
+
+  .diff-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+
+  .diff-desc {
+    font-size: 13px;
+    line-height: 1.82;
+    color: var(--ash);
+  }
+
+  /* ─── FOCUS ─── */
+  #focus {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .focus-roles {
+    border-left: 1px solid rgba(14,17,23,0.1);
+    padding-left: 32px;
+    margin-top: 4px;
+  }
+
+  .focus-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--ash);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(14,17,23,0.07);
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+
+  .focus-role:hover { color: var(--copper); }
+  .focus-role:last-child { border-bottom: none; }
+
+  /* ─── CLIENTS ─── */
+  #clients {
+    background: var(--navy);
+    padding: var(--gap) 80px;
+    text-align: center;
+  }
+
+  #clients .section-label { color: var(--copper-lt); }
+
+  #clients .section-heading { color: var(--white); }
+
+  .client-intro {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.5);
+    max-width: 580px;
+    margin: 0 auto 56px;
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .logo-tile {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 28px;
+    gap: 5px;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: default;
+    min-height: 100px;
+  }
+
+  .logo-tile:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(160,98,58,0.4);
+  }
+
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .logo-amp {
+    color: var(--copper-lt);
+    font-style: italic;
+  }
+
+  .logo-sub {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.28);
+  }
+
+  @media (max-width: 640px) {
+    .logo-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ─── PHILOSOPHY / ABOUT ─── */
+  #philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    align-items: center;
+  }
+
+  .philosophy-left {}
+
+  .philosophy-pull {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 2.8vw, 36px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--navy);
+  }
+
+  .copper-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--copper);
+    margin: 32px 0;
+  }
+
+  .philosophy-sub {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--mist);
+    letter-spacing: 0.01em;
+  }
+
+  .philosophy-right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* ─── TEAM BIOS ─── */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(14,17,23,0.08);
+  }
+
+  .bio-card {}
+
+  .bio-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .bio-title {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 16px;
+  }
+
+  .bio-body {
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--ash);
+  }
+
+  @media (max-width: 920px) {
+    .bio-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--bone);
+    text-align: center;
+    padding: var(--gap) 80px;
+  }
+
+  #contact .section-heading {
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+
+  #contact .section-body {
+    max-width: 460px;
+    margin: 0 auto 52px;
+  }
+
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin-bottom: 52px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--mist);
+  }
+
+  .contact-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-value:hover { color: var(--copper); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--ink);
+    padding: 36px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .footer-wordmark span { color: var(--copper); font-style: italic; }
+
+  .footer-copy {
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── MODAL ─── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(14,17,23,0.65);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--white);
+    width: 100%;
+    max-width: 520px;
+    padding: 56px 52px 48px;
+    position: relative;
+    animation: modalIn 0.25s ease;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--mist);
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    transition: color 0.2s;
+  }
+
+  .modal-close:hover { color: var(--ink); }
+
+  .modal-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 14px;
+  }
+
+  .modal-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .modal-sub {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ash);
+    margin-bottom: 36px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ash);
+  }
+
+  .form-group input,
+  .form-group select {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--bone);
+    border: 1px solid transparent;
+    border-bottom-color: rgba(14,17,23,0.15);
+    padding: 13px 14px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    background: #fff;
+    border-color: var(--copper);
+  }
+
+  .form-group input::placeholder { color: var(--mist); }
+
+  /* custom select arrow */
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: '↓';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--copper);
+    pointer-events: none;
+  }
+
+  .form-group select option { color: var(--ink); }
+
+  .modal-submit {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--copper);
+    border: none;
+    padding: 17px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.25s;
+  }
+
+  .modal-submit:hover { background: var(--navy); }
+  .modal-submit:disabled { background: var(--mist); cursor: not-allowed; }
+
+  .modal-note {
+    font-size: 11px;
+    color: var(--mist);
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+
+  /* Success state */
+  .modal-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0 8px;
+  }
+
+  .modal-success.show { display: flex; }
+  .modal-form-inner.hide { display: none; }
+
+  .success-mark {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--copper);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--copper);
+    margin-bottom: 24px;
+  }
+
+  .success-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .success-body {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ash);
+    max-width: 340px;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 920px) {
+    nav { padding: 18px 28px; }
+    .nav-links { display: none; }
+
+    #hero { grid-template-columns: 1fr; }
+    .hero-text { padding: 52px 28px; }
+    .hero-image { min-height: 340px; padding: 48px 28px 40px; }
+
+    section { padding: 64px 28px; }
+    hr.rule { margin: 0 28px; }
+
+    #approach { grid-template-columns: 1fr; }
+    .approach-intro { padding: 64px 28px; border-right: none; border-bottom: 1px solid rgba(14,17,23,0.08); }
+    .approach-grid { padding: 48px 28px; grid-template-columns: 1fr; }
+
+    #focus { grid-template-columns: 1fr; gap: 40px; }
+
+    #clients { padding: 64px 28px; }
+
+    #philosophy { grid-template-columns: 1fr; gap: 48px; }
+
+    #contact { padding: 64px 28px; }
+    .contact-row { flex-direction: column; gap: 32px; }
+
+    footer { padding: 28px; flex-direction: column; gap: 10px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="wordmark" aria-label="Mission &amp; Cause">MISSION <span>&amp;</span> CAUSE</a>
+  <ul class="nav-links">
+    <li><a href="#approach">Our Approach</a></li>
+    <li><a href="#focus">Focus</a></li>
+    <li><a href="#clients">Searches</a></li>
+    <li><a href="#philosophy">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Start a Search</a>
+</nav>
+
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Senior Communications Executive Search</p>
+    <h1 class="hero-headline">
+      The right leader<br>
+      <em>changes everything.</em>
+    </h1>
+    <p class="hero-sub">
+      Mission + Cause Talent connects senior communications leaders — CCOs, EVPs, practice heads, and agency principals — with the organizations that need them most. We work at the intersection of industry knowledge, genuine human insight, and relationships earned over decades of meaningful work.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Begin a Search</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div>
+      <p class="hero-panel-quote">
+        "The leaders who most transform organizations are rarely the ones looking for a new role. Getting to them requires something beyond a search — it requires trust."
+      </p>
+      <p class="hero-panel-attr">— The M+C Talent philosophy</p>
+    </div>
+    <div class="hero-panel-bottom">
+      <p class="hero-panel-statement">
+        Our work is built on <strong>thirty-plus years of lived experience</strong> inside the communications industry — as practitioners, as leaders, and as people who care deeply about the careers of the individuals we place.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+
+<!-- APPROACH -->
+<div id="approach">
+  <div class="approach-intro">
+    <p class="section-label">Our Approach</p>
+    <h2 class="section-heading">Relationships that<br>earn the conversation.</h2>
+    <div class="approach-lede">
+      We don't begin with a database. We begin with decades of genuine relationships — and the humility to know that the best candidates deserve to be approached with honesty about the opportunity, not just the title.
+    </div>
+    <p class="section-body">
+      Access to exceptional, often-unreachable candidates comes not from exclusivity, but from trust. When we reach out to someone who isn't looking, they respond because we've shown up for them — as colleagues, as honest advisors, as people who understand what matters to them at this point in their career.
+    </p>
+  </div>
+  <div class="approach-grid">
+    <div class="diff-item">
+      <div class="diff-bar"></div>
+      <h3 class="diff-title">Deep Industry Fluency</h3>
+      <p class="diff-desc">We understand the brief at a granular level — P&amp;L dynamics, governance structures, agency culture — because we've worked in and alongside these organizations for decades. That context makes us better partners and better advocates for both sides.</p>
+    </div>
+    <div class="diff-item">
+      <div class="diff-bar"></div>
+      <h3 class="diff-title">Earned Access</h3>
+      <p class="diff-desc">The most impactful leaders aren't browsing job boards. Over thirty years, we've built relationships with the people who shape the industry — and when we call, they listen. Not because of who we are, but because of how we've always shown up.</p>
+    </div>
+    <div class="diff-item">
+      <div class="diff-bar"></div>
+      <h3 class="diff-title">Slates That Challenge Convention</h3>
+      <p class="diff-desc">We meet your brief — then we bring candidates who expand it. The most transformative hire is sometimes the one you didn't know to ask for. We bring you the expected and the unexpected, and let you decide what the future looks like.</p>
+    </div>
+    <div class="diff-item">
+      <div class="diff-bar"></div>
+      <h3 class="diff-title">Human Insight at the Center</h3>
+      <p class="diff-desc">Senior leaders today are seeking meaning as much as compensation. We take time to understand where each candidate is in their journey — their aspirations, their values, what would make this the right next chapter — and match from that place.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+
+<!-- FOCUS -->
+<section id="focus">
+  <div>
+    <p class="section-label">Our Focus</p>
+    <h2 class="section-heading">Senior communications leadership. Exclusively.</h2>
+    <p class="section-body" style="max-width: 420px; margin-bottom: 22px;">
+      We do one thing — and we do it with discipline and care. We place senior communications executives across in-house brands, communications agencies, and nonprofit organizations.
+    </p>
+    <p class="section-body" style="max-width: 420px;">
+      Our focus is intentionally narrow because the work is inherently personal. These are careers, not transactions — and they deserve to be treated that way.
+    </p>
+  </div>
+  <div class="focus-roles">
+    <div class="focus-role">Chief Communications Officer</div>
+    <div class="focus-role">Head of Communications &amp; Public Affairs</div>
+    <div class="focus-role">Head of External Affairs &amp; Corporate Reputation</div>
+    <div class="focus-role">VP / SVP / EVP Communications</div>
+    <div class="focus-role">Agency EVP, SVP &amp; Practice Leader</div>
+    <div class="focus-role">Head of Public Relations — In-House</div>
+    <div class="focus-role">C-Suite Leaders at Communications Agencies</div>
+    <div class="focus-role">Communications Leaders at Nonprofit Organizations</div>
+    <div class="focus-role">AI Communications Leaders</div>
+  </div>
+</section>
+
+<hr class="rule">
+
+
+<!-- CLIENTS -->
+<section id="clients">
+  <p class="section-label">Representative Searches</p>
+  <h2 class="section-heading">Organizations that trusted<br>us with their most critical hire.</h2>
+  <p class="client-intro">
+    We've been honored to conduct searches across the full spectrum of the communications industry — from global health and industrial brands to leading agencies and independent firms.
+  </p>
+  <div class="logo-grid">
+    <div class="logo-tile">
+      <span class="logo-name">Verily Health</span>
+      <span class="logo-sub">an Alphabet Company</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">DS Smith</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">Weber Shandwick</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">Porter Novelli</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">Maslansky<span class="logo-amp"> + </span>Partners</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">BODEN Agency</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">Taft Communications</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">KWI Communications</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">104 West</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">Special Olympics</span>
+    </div>
+    <div class="logo-tile">
+      <span class="logo-name">Ajinomoto</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="philosophy-left">
+    <div class="philosophy-pull">
+      We help people translate who they are and what they believe into the career they were meant to have.
+    </div>
+    <div class="copper-rule"></div>
+    <p class="philosophy-sub">
+      That's what we're really doing — for the candidates we place and the organizations we serve.
+    </p>
+  </div>
+  <div class="philosophy-right">
+    <p class="section-label">About M+C Talent</p>
+    <p class="section-body">
+      Mission + Cause Talent was built on a simple belief: that communications — done with purpose, by the right leaders — can change the way organizations engage with the world. We started this firm because we'd spent decades in the industry watching the difference a single exceptional hire could make.
+    </p>
+    <p class="section-body">
+      We bring thirty-plus years of communications experience to every engagement — not as observers, but as practitioners who have hired for, led, and cared about these roles. We know what the work demands. We know what the best leaders look like. And we know what it means to find a role that genuinely fits.
+    </p>
+    <p class="section-body">
+      Our job isn't to fill a seat. It's to find the right person — and to make sure they understand why this opportunity might be the one worth saying yes to.
+    </p>
+
+  <div class="bio-grid">
+    <div class="bio-card">
+      <h3 class="bio-name">Brad MacAfee</h3>
+      <p class="bio-title">Founder &amp; CEO</p>
+      <p class="bio-body">Brad brings more than thirty years of communications leadership to every search — including his tenure as CEO of Porter Novelli, where he led one of the industry's most respected global agencies, and as CEO of KAOH Media, a strategic communications firm focused on community engagement and high-stakes public affairs. A lifelong champion of values-led hiring, Brad has been directly involved in hundreds of senior-level placements across agency and corporate environments. His approach is grounded in a simple belief: that the right match — one built on shared values and authentic fit — changes outcomes for organizations and careers alike. Brad is a board leader across multiple civic and industry institutions and holds deep roots in both the Atlanta and national communications communities.</p>
+    </div>
+    <div class="bio-card">
+      <h3 class="bio-name">Steve Mallison-Jones</h3>
+      <p class="bio-title">Partner</p>
+      <p class="bio-body">Steve is one of the most trusted search professionals in the communications and public relations industry, with twenty years of experience placing senior talent across the United States, Europe, and beyond. Before dedicating his career to executive search, Steve served eight years in the Royal Air Force — an experience that shaped his discipline, his integrity, and his genuine commitment to the people he works with. Clients and candidates alike describe Steve as a confidant first and a recruiter second — someone who takes the long view on relationships and delivers placements that last. Steve is a master at the craft of locating, attracting and securing talent. He loves people and life with a passion.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Let's Talk</p>
+  <h2 class="section-heading">Every great search<br>starts with a conversation.</h2>
+  <p class="section-body">
+    Whether you have an open role today or are simply thinking ahead, we welcome a candid, confidential conversation. No pitch. Just two people talking about what you need.
+  </p>
+  <div class="contact-row">
+    <div class="contact-item">
+      <span class="contact-label">Phone</span>
+      <a href="tel:+14042189393" class="contact-value">404-218-9393</a>
+    </div>
+    <div class="contact-item">
+      <span class="contact-label">Email</span>
+      <a href="mailto:brad@missionandcause.com" class="contact-value">brad@missionandcause.com</a>
+    </div>
+    <div class="contact-item">
+      <span class="contact-label">LinkedIn</span>
+      <a href="https://linkedin.com/in/bradmacafee" target="_blank" class="contact-value">Brad MacAfee</a>
+    </div>
+  </div>
+  <a href="mailto:brad@missionandcause.com" class="btn-primary">Start the Conversation</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-wordmark">MISSION <span>&amp;</span> CAUSE</span>
+  <span class="footer-copy">© 2026 Mission + Cause Talent. All rights reserved.</span>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+    <!-- Form content -->
+    <div class="modal-form-inner" id="modalFormInner">
+      <p class="modal-eyebrow">Start a Search</p>
+      <h2 class="modal-heading" id="modalHeading">Tell us about<br>the role.</h2>
+      <p class="modal-sub">Four quick fields — that's all we need to start. We'll be in touch within one business day.</p>
+
+      <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" placeholder="Your organization" autocomplete="organization" />
+      </div>
+
+      <div class="form-group">
+        <label for="contactName">Your Name</label>
+        <input type="text" id="contactName" placeholder="First and last name" autocomplete="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="roleTitle">Role You're Looking to Fill</label>
+        <input type="text" id="roleTitle" placeholder="e.g. Chief Communications Officer" />
+      </div>
+
+      <div class="form-group">
+        <label for="timeline">Desired Timeline</label>
+        <div class="select-wrap">
+          <select id="timeline">
+            <option value="" disabled selected>Select a timeframe</option>
+            <option value="Immediately — role is open now">Immediately — role is open now</option>
+            <option value="Within 30 days">Within 30 days</option>
+            <option value="Within 60–90 days">Within 60–90 days</option>
+            <option value="Planning ahead (3–6 months)">Planning ahead (3–6 months)</option>
+            <option value="Exploratory — just starting to think about it">Exploratory — just starting to think about it</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="modal-submit" id="modalSubmit">Send to M+C Talent</button>
+      <p class="modal-note">Sent directly to Brad and Steve. Confidential and no obligation.</p>
+    </div>
+
+    <!-- Success state -->
+    <div class="modal-success" id="modalSuccess">
+      <div class="success-mark">✓</div>
+      <h3 class="success-heading">We've got it.</h3>
+      <p class="success-body">Thank you — Brad and Steve will be in touch within one business day. We look forward to the conversation.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ─── EmailJS config ───────────────────────────────────────────────
+  // TO ACTIVATE: replace these three placeholders with your values from
+  // emailjs.com → Account → API Keys / Email Templates
+  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'user_aBcDeFgH...'
+  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_xyz123'
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_abc456'
+  // ─────────────────────────────────────────────────────────────────
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  // Open modal — all "Start a Search" / "Begin a Search" buttons
+  document.querySelectorAll('[href="#contact"], .nav-cta').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  // Also the bottom contact CTA
+  document.querySelector('#contact .btn-primary')?.addEventListener('click', e => {
+    e.preventDefault();
+    openModal();
+  });
+
+  function openModal() {
+    document.getElementById('searchModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('companyName').focus();
+  }
+
+  function closeModal() {
+    document.getElementById('searchModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+
+  document.getElementById('searchModal').addEventListener('click', e => {
+    if (e.target === document.getElementById('searchModal')) closeModal();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Submit
+  document.getElementById('modalSubmit').addEventListener('click', async () => {
+    const company  = document.getElementById('companyName').value.trim();
+    const contact  = document.getElementById('contactName').value.trim();
+    const role     = document.getElementById('roleTitle').value.trim();
+    const timeline = document.getElementById('timeline').value;
+
+    if (!company || !contact || !role || !timeline) {
+      const fields = [
+        { id: 'companyName', val: company },
+        { id: 'contactName', val: contact },
+        { id: 'roleTitle',   val: role },
+        { id: 'timeline',    val: timeline }
+      ];
+      const first = fields.find(f => !f.val);
+      document.getElementById(first.id).focus();
+      return;
+    }
+
+    const btn = document.getElementById('modalSubmit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const templateParams = {
+      company_name:  company,
+      contact_name:  contact,
+      role_title:    role,
+      timeline:      timeline,
+      // These map to your EmailJS template variables
+      // The template should CC or send to both brad@ and steve@
+      to_email:      'brad@missionandcause.com, steve@missionandcause.com'
+    };
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+      document.getElementById('modalFormInner').classList.add('hide');
+      document.getElementById('modalSuccess').classList.add('show');
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      btn.disabled = false;
+      btn.textContent = 'Send to M+C Talent';
+      alert('Something went wrong — please email us directly at brad@missionandcause.com');
+    }
+  });
+</script>
+
+</body>
+</html>
